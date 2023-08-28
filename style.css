@@ -1,0 +1,171 @@
+@charset 'UTF-8';
+
+/*Importando fonte dos títulos*/
+@font-face{
+    font-family: 'idroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    /*Aqui colocamos as configurações globais para o nosso CSS*/
+    --cor_slogan: rgb(243, 191, 191);
+    --cor_fundo: #84e1ad;
+    --cor_verde_claro: #37c978;
+    --cor_verde_escuro: #025126;
+    --fonte_padrao: Arial, Helvetica, sans-serif;
+    --fonte_especial: 'idroid';
+
+    /*na hora de usar a variável, usamos var(--cor_fundo)*/
+}
+
+body{
+    background-color: var(--cor_fundo);
+    font-family: var(--fonte_padrao);
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+    color: black;
+}
+
+
+p{
+    text-indent: 3ex;
+    line-height: 1em;
+}
+
+div.imagem{
+    text-align: center;
+}
+img{
+	width: 100%;
+}
+img.imagem_pequena{
+	max-width: 300px;
+}
+
+
+header{
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, var(--cor_verde_claro), var(--cor_verde_escuro));
+    max-width: 100%;
+    min-height: 200px;
+}
+header h1{
+    margin-top: 0px;
+    padding-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5em;
+    text-shadow: 5px 5px 15px rgb(48, 37, 37);
+
+}
+header p{
+    color: var(--cor_slogan);
+}
+header nav{
+    text-align: justify;
+}
+header a{
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    transition-duration: 0.5s;
+}
+header a:hover{
+    text-decoration: underline;
+    color: var(--cor_verde_claro);
+    background-color: var(--cor_verde_escuro);
+    border-radius: 5px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: var(--cor_verde_escuro);
+    margin: 0px;
+    padding: 2px;
+}
+
+
+main{
+    margin: auto;
+    margin-bottom: 40px;
+    min-width: 320px;
+    max-width: 1000px;
+    box-shadow: 5px 5px 15px rgb(68, 56, 56);
+    background-color: white;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+/*seções*/
+
+article h1{
+    font-size: 2em;
+    font-family: var(--fonte_especial);
+    color:var(--cor_verde_escuro);
+}
+
+
+article h2{
+    font-size: 1.5em;
+    font-family: var(--fonte_especial);
+    color:var(--cor_verde_escuro);
+    background-image: linear-gradient(to right, var(--cor_fundo), white);
+}
+
+
+div.youtube{
+    background-color: var(--cor_verde_escuro);
+    margin: 0px -10px 0px -10px;
+    padding: 20px;
+    /*vamos configurar video do youtube como responsivo (que se adapta ao tamanho e também colocar ele no meio; essa parte nao entendi quase nada*/
+
+    position: relative;
+    padding-bottom: 59%;
+}
+div.youtube iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+aside.quer_aprender_mais{
+    background-color: var(--cor_fundo);
+    border-radius: 10px;
+    padding-bottom: 15px;
+    box-shadow: 3px 3px 10px rgb(68, 56, 56);
+}
+
+aside.quer_aprender_mais h1{
+    font-family: var(--fonte_padrao);
+    padding: 15px;
+    color: white;
+    font-size: 1.5em;
+    background-color: var(--cor_verde_escuro);
+    border-radius: 10px 10px 0px 0px;
+	
+}
+aside.quer_aprender_mais p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+aside.quer_aprender_mais ul{
+    padding: 0px;
+    padding-left: 15px;
+    list-style-position: inside;    /*coloca as bolinhas dentro da tag de nível superior*/
+    columns: 2;
+    list-style-type: '\2714\00A0\00A0';
+    /*2714 é número hexadecimal do simbolo checked*/
+}
